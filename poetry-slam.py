@@ -22,11 +22,13 @@ def lines_printed_random(lines_list):
     for _ in range(counter):
         print (random.choice(lines_list))
 
-
-    
+def lines_printed_custom(lines_list):
+    order = lines_list
+    for alph_order in sorted(order):
+        print(alph_order)
 
 
 file_lines = get_file_lines('Rumi.txt')
 # lines_printed_backwards(file_lines)
-lines_printed_random(file_lines) 
-# lines_printed_custom(file_lines)
+# lines_printed_random(file_lines) 
+lines_printed_custom(file_lines)
